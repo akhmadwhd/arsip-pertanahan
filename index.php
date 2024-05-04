@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Dashboard V.2 | Kiaalap - Kiaalap Admin Template</title>
+        <title>Arsip Database Pertanahan</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -56,7 +56,7 @@
                 padding: 15px 25px;
                 color: white;
                 border: 1px solid white;
-                -webkit-transition: all 0.5s; 
+                -webkit-transition: all 0.5s;
                 transition: all 0.5s;
                 margin-right: 10px;
             }
@@ -105,7 +105,7 @@
                         </li>
                     </ul> -->
 
-                   
+
                 </div>
             </div>
         </nav>
@@ -117,20 +117,20 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div style="margin-top: 140px;">
-                            <h1>Sistem Informasi Arsip Digital</h1>
-                            <p>Manajemen file arsip dengan mudah dan cepat.</p>
+                            <h1>Arsip Database Pertanahan</h1>
+                            <p>Dinas Perumahan Kawasan Permukiman Dan Pertanahan</p>
 
                             <br>
                             <br>
 
-                            <a href="user_login.php">LOGIN USER</a>
+                            <!--<a href="user_login.php">LOGIN USER</a>-->
                             <a href="login.php">LOGIN ADMIN / PETUGAS</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
 
                         <img src="gambar/depan/2.png">
-                        
+
                     </div>
                 </div>
 

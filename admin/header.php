@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admin - Sistem Informasi Arsip Digital</title>
+    <title>Admin - Arsip Database Pertanahan</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -33,7 +33,7 @@
 
     <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
-    <?php 
+    <?php
     include '../koneksi.php';
     session_start();
     if($_SESSION['status'] != "admin_login"){
@@ -123,7 +123,7 @@
                                     <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
                                         <div class="header-top-menu tabl-d-n">
                                             <ul class="nav navbar-nav mai-top-nav">
-                                                <li class="nav-item"><a href="#" class="nav-link">Sistem Informasi Arsip Digital</a></li>
+                                                <li class="nav-item"><a href="#" class="nav-link">Arsip Database Pertanahan</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@
                                                             <h1>Riwayat unduh terakhir</h1>
                                                         </div>
                                                         <ul class="notification-menu">
-                                                            <?php 
+                                                            <?php
                                                             $arsip = mysqli_query($koneksi,"SELECT * FROM riwayat,arsip,user WHERE riwayat_arsip=arsip_id and riwayat_user=user_id ORDER BY riwayat_id DESC");
                                                             while($p = mysqli_fetch_array($arsip)){
                                                                 ?>
@@ -154,7 +154,7 @@
                                                                 </a>
                                                                 <hr>
                                                             </li>
-                                                            <?php 
+                                                            <?php
                                                         }
                                                         ?>
                                                     </ul>
@@ -166,11 +166,11 @@
 
                                             <li class="nav-item">
                                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-                                                    <?php 
+                                                    <?php
                                                     $id_admin = $_SESSION['id'];
                                                     $profil = mysqli_query($koneksi,"select * from admin where admin_id='$id_admin'");
                                                     $profil = mysqli_fetch_assoc($profil);
-                                                    if($profil['admin_foto'] == ""){ 
+                                                    if($profil['admin_foto'] == ""){
                                                       ?>
                                                       <img src="../gambar/sistem/user.png" style="width: 20px;height: 20px">
                                                   <?php }else{ ?>
@@ -243,4 +243,3 @@
         </div>
     </div>
 </div>
-

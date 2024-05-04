@@ -34,7 +34,7 @@
         <div class="error-page-int">
             <div class="text-center m-b-md custom-login">
                 <h3>SISTEM INFORMASI</h3>
-                <h4>ARSIP DIGITAL</h4>
+                <h4>Arsip Database Pertanahan</h4>
 
                 <br>
 
@@ -42,7 +42,7 @@
 
             </div>
             <div class="content-error">
-                <?php 
+                <?php
                 // pesan notifikasi
 
                 if(isset($_GET['alert'])){
@@ -62,7 +62,7 @@
                         <br>
                         <br>
                         <center>
-                            <h4>LOGIN ADMIN / PENGURUS</h4>    
+                            <h4>LOGIN ADMIN / PENGURUS</h4>
                         </center>
                         <br>
                         <br>
@@ -74,7 +74,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="required" autocomplete="off" name="password" id="password" class="form-control">
+                                <input type="password" title="Please enter your password" placeholder="Please enter you Password " required="required" autocomplete="off" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="password">Hak Akses</label>
@@ -82,9 +82,9 @@
                                     <option value="admin">Admin</option>
                                     <option value="petugas">Petugas</option>
                                 </select>
-                                
+
                             </div>
-                            
+
                             <input type="submit" class="btn btn-success btn-block loginbtn" value="Login">
                         </form>
 
@@ -96,9 +96,9 @@
                 <a href="index.php">Kembali</a>
             </div>
             <div class="text-center login-footer">
-                <p class="text-muted">Copyright © <?php echo date('Y') ?>. All rights reserved. Sistem Informasi Arsip Digital (SIAD)</p>
+                <p class="text-muted">Copyright © <?php echo date('Y') ?>. All rights reserved. Arsip Database Pertanahan</p>
             </div>
-        </div>   
+        </div>
     </div>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

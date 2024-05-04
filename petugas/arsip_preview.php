@@ -41,8 +41,8 @@
                     <br>
                     <br>
 
-                    <?php 
-                    $id = $_GET['id'];  
+                    <?php
+                    $id = $_GET['id'];
                     $data = mysqli_query($koneksi,"SELECT * FROM arsip,kategori,petugas WHERE arsip_petugas=petugas_id and arsip_kategori=kategori_id and arsip_id='$id'");
                     while($d = mysqli_fetch_array($data)){
                         ?>
@@ -84,26 +84,20 @@
                             </div>
                             <div class="col-lg-8">
 
-                                <?php 
-                                if($d['arsip_jenis'] == "png" || $d['arsip_jenis'] == "jpg" || $d['arsip_jenis'] == "gif" || $d['arsip_jenis'] == "jpeg"){
-                                    ?>
-                                    <img src="../arsip/<?php echo $d['arsip_file']; ?>">
-                                    
-                                    <?php
-                                }elseif($d['arsip_jenis'] == "pdf"){
-                                    ?>
+                              <?php
+                              if ($d['arsip_jenis'] == "pdf") {
+                                  ?>
+                                  <div class="pdf-singe-pro">
+                                      <a class="media" href="../arsip/<?php echo $d['arsip_file']; ?>"></a>
+                                  </div>
+                                  <?php
+                              } else {
+                                  ?>
+                                  <a href="../arsip/<?php echo $d['arsip_file']; ?>" target="_blank">Preview atau Download di sini</a>
+                                  <?php
+                              }
+                              ?>
 
-                                    <div class="pdf-singe-pro">
-                                        <a class="media" href="../arsip/<?php echo $d['arsip_file']; ?>"></a>
-                                    </div>
-
-                                    <?php
-                                }else{
-                                    ?>
-                                    <p>Preview tidak tersedia, silahkan <a target="_blank" style="color: blue" href="../arsip/<?php echo $d['arsip_file']; ?>">Download di sini.</a></p>.
-                                    <?php
-                                }
-                                ?>
 
                             </div>
                         </div>
@@ -114,7 +108,7 @@
 
 
 
-                        <?php 
+                        <?php
                     }
                     ?>
 
