@@ -35,31 +35,12 @@
                             <div id="sparklinedash"></div>
                         </li>
                         <li class="text-right sp-cn-r">
-                            <i class="fa fa-level-up" aria-hidden="true"></i> 
+                            <i class="fa fa-level-up" aria-hidden="true"></i>
                             <span class="counter text-success">
-                                <?php 
+                                <?php
                                 $jumlah_petugas = mysqli_query($koneksi,"select * from petugas");
                                 ?>
                                 <span class="counter"><?php echo mysqli_num_rows($jumlah_petugas); ?></span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="white-box analytics-info-cs res-mg-t-30 table-mg-t-pro-n">
-                    <h3 class="box-title">User / Pengguna</h3>
-                    <ul class="list-inline two-part-sp">
-                        <li>
-                            <div id="sparklinedash2"></div>
-                        </li>
-                        <li class="text-right graph-two-ctn">
-                            <i class="fa fa-level-up" aria-hidden="true"></i> 
-                            <span class="counter text-purple">
-                                <?php 
-                                $jumlah_user = mysqli_query($koneksi,"select * from user");
-                                ?>
-                                <span class="counter"><?php echo mysqli_num_rows($jumlah_user); ?></span>
                             </span>
                         </li>
                     </ul>
@@ -73,9 +54,9 @@
                             <div id="sparklinedash3"></div>
                         </li>
                         <li class="text-right graph-three-ctn">
-                            <i class="fa fa-level-up" aria-hidden="true"></i> 
+                            <i class="fa fa-level-up" aria-hidden="true"></i>
                             <span class="counter text-info">
-                                <?php 
+                                <?php
                                 $jumlah_arsip = mysqli_query($koneksi,"select * from arsip");
                                 ?>
                                 <span class="counter"><?php echo mysqli_num_rows($jumlah_arsip); ?></span>
@@ -92,9 +73,9 @@
                             <div id="sparklinedash4"></div>
                         </li>
                         <li class="text-right graph-four-ctn">
-                            <i class="fa fa-level-down" aria-hidden="true"></i> 
+                            <i class="fa fa-level-down" aria-hidden="true"></i>
                             <span class="text-danger">
-                                <?php 
+                                <?php
                                 $jumlah_kategori = mysqli_query($koneksi,"select * from kategori");
                                 ?>
                                 <span class="counter"><?php echo mysqli_num_rows($jumlah_kategori); ?></span>
@@ -118,19 +99,19 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="caption pro-sl-hd">
-                                    <span class="caption-subject"><b>Grafik pengunduhan arsip</b></span>
+                                    <span class="caption-subject"><b>Grafik Upload arsip</b></span>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                 <div class="actions graph-rp graph-rp-dl">
-                                    <p>Grafik jumlah unduh arsip perhari selama sebulan</p>
+                                    <p>Grafik jumlah Upload arsip perhari selama sebulan</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <ul class="list-inline cus-product-sl-rp">
                         <li>
-                            <h5><i class="fa fa-circle" style="color: #006DF0;"></i>Jumlah Unduhan</h5>
+                            <h5><i class="fa fa-circle" style="color: #006DF0;"></i>Jumlah Upload</h5>
                         </li>
                     </ul>
                     <div id="extra-area-chart" style="height: 356px;"></div>
@@ -142,7 +123,7 @@
 
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 
-                <?php 
+                <?php
                 $id = $_SESSION['id'];
                 $saya = mysqli_query($koneksi,"select * from petugas where petugas_id='$id'");
                 $s = mysqli_fetch_assoc($saya);
@@ -155,7 +136,7 @@
                     </div>
 
                     <div class="single-product-text">
-                        <?php 
+                        <?php
                         if($s['petugas_foto'] == ""){
                             ?>
                             <img class="img-user" src="../gambar/sistem/user.png">
@@ -169,7 +150,7 @@
 
                         <h4><a class="cards-hd-dn" href="#"><?php echo $s['petugas_nama']; ?></a></h4>
                         <h5>Petugas</h5>
-                        <p class="ctn-cards">Pengelolaan arsip jadi lebih mudah dengan sistem informasi arsip digital.</p>
+                        <p class="ctn-cards">Dinas Perumahan Kawasan Permukiman Dan Pertanahan Kabupaten Morowali</p>
                     </div>
                 </div>
 

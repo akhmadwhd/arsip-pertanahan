@@ -1,148 +1,105 @@
-    <!doctype html>
-    <html class="no-js" lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Arsip Database Pertanahan</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sistem Informasi Database Pertanahan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
+    <link rel="stylesheet" href="assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/morrisjs/morris.css">
+    <link rel="stylesheet" href="assets/css/scrollbar/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/metisMenu/metisMenu.min.css">
+    <link rel="stylesheet" href="assets/css/metisMenu/metisMenu-vertical.css">
+    <link rel="stylesheet" href="assets/css/calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="assets/css/calendar/fullcalendar.print.min.css">
+    <link rel="stylesheet" href="assets/css/form/all-type-forms.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
 
-    <body>
+<body>
+    <div class="error-pagewrap">
+        <div class="error-page-int">
+            <div class="text-center m-b-md custom-login">
+                <img src="gambar/depan/logo.png" alt="Logo" style="max-width: 100px;">
+                <h3>SISTEM INFORMASI</h3>
+                <h4>Arsip Database Pertanahan</h4>
+                <p>Silahkan login untuk mengakses arsip.</p>
+            </div>
+            <div class="content-error">
+                <?php
+                // pesan notifikasi
 
-        <style type="text/css">
-
-            .navbar-siad{
-                background: #006df0;
-                border-radius: 0px;
-                border: 1px solid #006df0;
-                margin: 0px;
-                padding: 20px 0px;
-            }
-
-            .navbar-inverse .navbar-brand {
-
-                color: #fff;
-
-            }
-
-            .navbar-inverse .navbar-nav > li > a {
-
-                color: #fff;
-
-            }
-            .navbar-siad > li > a {
-
-                color: #9d9d9d !important;
-
-            }
-
-            .banner{
-                background: #006df0;
-                border-radius: 0px;
-                border: 1px solid #006df0;
-                padding: 60px 0px;
-            }
-
-            .banner{
-                color: white;
-            }
-
-            .banner a{
-                padding: 15px 25px;
-                color: white;
-                border: 1px solid white;
-                -webkit-transition: all 0.5s;
-                transition: all 0.5s;
-                margin-right: 10px;
-            }
-
-            .banner a:hover{
-                text-decoration: none;
-                border: 1px dashed white;
-            }
-
-            .banner p{
-                font-size: 13pt;
-            }
-        </style>
-
-
-
-        <nav class="navbar navbar-inverse navbar-siad">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Arsip Digital</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <!-- <ul class="nav navbar-nav">
-                        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Link</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul> -->
-
-
+                if(isset($_GET['alert'])){
+                    if($_GET['alert'] == "gagal"){
+                        echo "<div class='alert alert-danger'>LOGIN GAGAL! USERNAME DAN PASSWORD SALAH!</div>";
+                    }else if($_GET['alert'] == "logout"){
+                        echo "<div class='alert alert-success'>ANDA TELAH BERHASIL LOGOUT</div>";
+                    }else if($_GET['alert'] == "belum_login"){
+                        echo "<div class='alert alert-warning'>ANDA HARUS LOGIN UNTUK MENGAKSES DASHBOARD</div>";
+                    }
+                }
+                ?>
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <center>
+                            <h4>LOGIN ADMIN / PENGURUS</h4>
+                        </center>
+                        <form action="periksa_login.php" method="POST" id="loginForm">
+                            <div class="form-group">
+                                <label class="control-label" for="username">Username</label>
+                                <input type="text" placeholder="username" title="Please enter you username" required="required" autocomplete="off" name="username" id="username" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Password</label>
+                                <input type="password" title="Please enter your password" placeholder="Please enter you Password " required="required" autocomplete="off" name="password" id="password" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label" for="password">Hak Akses</label>
+                                <select class="form-control" name="akses">
+                                    <option value="admin">Admin</option>
+                                    <option value="petugas">Petugas</option>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn btn-success btn-block loginbtn" value="Login">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </nav>
-
-
-        <div class="banner">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div style="margin-top: 140px;">
-                            <h1>Arsip Database Pertanahan</h1>
-                            <p>Dinas Perumahan Kawasan Permukiman Dan Pertanahan</p>
-
-                            <br>
-                            <br>
-
-                            <!--<a href="user_login.php">LOGIN USER</a>-->
-                            <a href="login.php">LOGIN ADMIN / PETUGAS</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-
-                        <img src="gambar/depan/2.png">
-
-                    </div>
-                </div>
-
+            <div class="text-center login-footer">
+                <p class="text-muted">© <?php echo date('Y') ?> Arsip Database Pertanahan</p>
             </div>
         </div>
+    </div>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery-price-slider.js"></script>
+    <script src="assets/js/jquery.meanmenu.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/jquery.scrollUp.min.js"></script>
+    <script src="assets/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/scrollbar/mCustomScrollbar-active.js"></script>
+    <script src="assets/js/metisMenu/metisMenu.min.js"></script>
+    <script src="assets/js/metisMenu/metisMenu-active.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/icheck/icheck.min.js"></script>
+    <script src="assets/js/icheck/icheck-active.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 
-
-
-
-
-        <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-    </body>
-
-    </html>
+</html>

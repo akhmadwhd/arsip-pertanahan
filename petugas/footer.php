@@ -1,16 +1,19 @@
 
-<div class="footer-copyright-area mg-t-30">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="footer-copy-right">
-					<p>Copyright © <?php echo date('Y') ?>. Sistem Informasi Arsip Digital. All rights reserved.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
+<div class="footer-copyright-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copy-right">
+                        <br>
+                        <p class="text-muted">© <?php echo date('Y') ?> Arsip Database Pertanahan</p>
+                        <p>Copyright © <?php echo date('Y') ?>. Sistem Informasi Arsip Database Pertanahan. All rights
+                            reserved.</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
@@ -54,11 +57,11 @@
 			element: 'extra-area-chart',
 			data: [
 
-			<?php 
-			$dateBegin = strtotime("first day of this month");  
+			<?php
+			$dateBegin = strtotime("first day of this month");
 			$dateEnd = strtotime("last day of this month");
 
-			$awal = date("Y/m/d", $dateBegin);         
+			$awal = date("Y/m/d", $dateBegin);
 			$akhir = date("Y/m/d", $dateEnd);
 
 			$arsip = mysqli_query($koneksi,"SELECT * FROM riwayat WHERE date(riwayat_waktu) >= '$awal' AND date(riwayat_waktu) <= '$akhir'");
@@ -71,7 +74,7 @@
 					period: '<?php echo date('Y-m-d',strtotime($p['riwayat_waktu'])) ?>',
 					Unduh: <?php echo $j ?>,
 				},
-				<?php 
+				<?php
 			}
 			?>
 

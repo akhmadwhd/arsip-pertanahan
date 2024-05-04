@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Admin - Arsip Database Pertanahan</title>
+    <title>Arsip Database Pertanahan</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -32,6 +32,13 @@
     <link rel="stylesheet" type="text/css" href="../assets/js/DataTables/datatables.css">
 
     <script src="../assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        .sidebar-header .main-logo,
+        .sidebar-header strong a img {
+            width: 80px; /* Ubah angka ini sesuai dengan ukuran yang Anda inginkan */
+            height: auto; /* Ini akan membuat gambar mengikuti proporsi aslinya */
+        }
+    </style>
 
     <?php
     include '../koneksi.php';
@@ -45,8 +52,8 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="index.html"><img class="main-logo" src="../assets/img/logo/logo.png" alt="" /></a>
-                <strong><a href="index.html"><img src="../assets/img/logo/logosn.png" alt="" /></a></strong>
+                <a href="#"><img class="main-logo" src="../assets/img/logo/logo23.jpg" alt="" /></a>
+                <strong><a href="#"><img src="../assets/img/logo/logo23.jpg" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
 
@@ -69,15 +76,7 @@
                         </li>
 
                         <li>
-                            <a href="user.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data User</span></a>
-                        </li>
-
-                        <li>
                             <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
-                        </li>
-
-                        <li>
-                            <a href="riwayat.php" aria-expanded="false"><span class="educate-icon educate-form icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Riwayat Unduh</span></a>
                         </li>
 
 
@@ -101,7 +100,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="../assets/img/logo/logo.png" alt="" /></a>
+
                     </div>
                 </div>
             </div>
@@ -176,10 +175,10 @@
                                                   <?php }else{ ?>
                                                     <img src="../gambar/admin/<?php echo $profil['admin_foto'] ?>" style="width: 20px;height: 20px">
                                                 <?php } ?>
-                                                <span class="admin-name"><?php echo $_SESSION['nama']; ?> [ <b>Administrator</b> ]</span>
+                                                <span class="admin-name"><?php echo $_SESSION['nama']; ?> </span>
                                                 <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
                                             </a>
-                                            <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                            <ul role="menu" class="dropdown-header-top author-log dropdown-menu">
                                                 <li><a href="profil.php"><span class="edu-icon edu-home-admin author-log-ic"></span>Profil Saya</a></li>
                                                 <li><a href="gantipassword.php"><span class="edu-icon edu-user-rounded author-log-ic"></span>Ganti Password</a></li>
                                                 <li><a href="logout.php"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a></li>
@@ -217,15 +216,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="user.php" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data User</span></a>
-                                </li>
-
-                                <li>
                                     <a href="arsip.php" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Data Arsip</span></a>
-                                </li>
-
-                                <li>
-                                    <a href="riwayat.php" aria-expanded="false"><span class="educate-icon educate-form icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Riwayat Unduh</span></a>
                                 </li>
 
                                 <li>

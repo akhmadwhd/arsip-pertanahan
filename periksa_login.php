@@ -1,4 +1,4 @@
-<?php 
+<?php
 // menghubungkan dengan koneksi
 include 'koneksi.php';
 
@@ -22,7 +22,7 @@ if($akses == "admin"){
 
 		header("location:admin/");
 	}else{
-		header("location:login.php?alert=gagal");
+		header("location:index.php?alert=gagal");
 	}
 
 }else{
@@ -40,9 +40,7 @@ if($akses == "admin"){
 
 		header("location:petugas/");
 	}else{
-		header("location:login.php?alert=gagal");
+		header("location:index.php?alert=gagal");
 	}
 
 }
-
-
