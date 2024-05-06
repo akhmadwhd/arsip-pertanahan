@@ -27,11 +27,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<div class="mb-3 row">
 					<label class="col-md-4 control-label" for="tanggal">Tanggal</label>
 					<label class="col-md-8 isi">: <?= date_indo($tanggal, 'd F Y');
-													if ($f == 'sudah') {
-														echo "<br />&nbsp;<div class=\"alert alert-warning p-2 my-0 text-dark\">Retensi expired: " . date_format(date_create($b), 'd-M-Y') . "</div>";
-													} else {
-														echo "<br />&nbsp;<div class=\"alert alert-warning p-2 my-0 text-dark\">Retensi tgl: " . date_format(date_create($b), 'd-M-Y') . "</div>";
-													}
 													?>
 					</label>
 				</div>
